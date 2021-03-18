@@ -26,14 +26,14 @@ To work in a production environment, tests were designed for the server.
 # Preparation
 This server has been tested in virtual machine of Ubuntu20.04 in host system Windows 10 with following setups. <br>
 -	Go 1.16.2
--	Docker 19.03.8
+-	Docker 20.10.3
 -	Kubernetes 1.20
 -	Minikube 1.18.1
 
 
 
 # Run application in a Kubernetes cluster
-Please navigate to `/Counter-Server-main/` then start the following steps:
+Please navigate to the project folder `/Counter-Server-main/` then start the following steps:
 
 ### Deploy to Kubernetes cluster
 Deploy the app to Kubernetes cluster, well, to minikube.<br>
