@@ -23,9 +23,18 @@ func getCounter(w http.ResponseWriter, r *http.Request){
 	fmt.Fprintf(w, "Counter: %v", count)
 }
 
+func homePage(w http.ResponseWriter, r *http.Request){
+	fmt.Fprintf(w, "Welcome to use counter serve. \n")
+	fmt.Fprintf(w, "\n")
+	fmt.Fprintf(w, "- To increase counter, please navigate to /increaseCounter \n")
+	fmt.Fprintf(w, "- To decrease counter, please navigate to /decreaseCounter \n")
+	fmt.Fprintf(w, "- To show the current counter, please navigate to /getCounter \n")
+}
+
 func main(){
 	router := mux.NewRouter()
 
+	router.HandleFunc("/", homePage)
 	router.HandleFunc("/increaseCounter", increaseCounter)
 	router.HandleFunc("/decreaseCounter", decreaseCounter)
 	router.HandleFunc("/getCounter", getCounter).Methods("GET")
