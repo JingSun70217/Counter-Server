@@ -12,8 +12,8 @@ A Docker image `sunjing70217/counter` (uploaded in DockerHub) is created with th
 The server could be deployed on a local Kubernetes.<br>
 To work in a production environment, tests were designed for the server.
 
-`/counter_prj/src/main.go` is the main file of this project. <br>
-`/counter_prj/src/main_test.go` is the test file of the main functions. <br>
+`/src/main.go` is the main file of this project. <br>
+`/src/main_test.go` is the test file of the main functions. <br>
 `/Dockerfile` is the Dockerfile for creating Docker images automatically.<br>
 `/counter_kube.yml` is the YAML file for creating Kubernetes Deployment and Service.
 
@@ -33,7 +33,7 @@ This server has been tested in virtual machine of Ubuntu20.04 in host system Win
 
 
 # Run application in a Kubernetes cluster
-Please navigate to `/counter_prj/` then start the following steps:
+Please navigate to `/Counter-Server-main/` then start the following steps:
 
 ### Deploy to Kubernetes cluster
 Deploy the app to Kubernetes cluster, well, to minikube.<br>
@@ -82,9 +82,9 @@ The number of counters will be increased by 1 when reloading the current page.<b
 The number of counters will be decreased by 1 when reloading the current page.
 
 # Testing
-The `main_test.go` file in `/counter_prj/src/` tests the connection status to port and checks the printed strings for each function.  <br>
+The `main_test.go` file in `/src/` tests the connection status to port and checks the printed strings for each function.  <br>
 
-Running Test: ``` $ go test```  under `/counter_prj/src/`. <br>
+Running Test: ``` $ go test```  under `/src/`. <br>
 
 If all tests are passed, the “PASS” result will be visualized.
 
